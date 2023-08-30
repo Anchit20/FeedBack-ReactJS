@@ -13,10 +13,10 @@ function FeedBackitem({item}) {
     <Card >
         <div className="num-display">{item.rating}</div>
         <button onClick={()=>deleteFeedback(item.id)} className="close">
-          <FaTimes color='purple'/>
+          <FaTimes color='#1E5128'/>
         </button>
         <button onClick={()=> editFeedback(item )} className="edit">
-          <FaEdit color="purple"/>
+          <FaEdit color="#1E5128"/>
         </button>
         <div className="text-display">{item.text}</div>
     </Card>

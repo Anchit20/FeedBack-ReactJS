@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #202142;
+  background-color: #183D3D;
   color: #fff;
   line-height: 1.6;
 }
@@ -67,7 +67,7 @@ header {
 .rating li,
 .num-display {
   position: relative;
-  background: #f4f4f4;
+  background: #CEDEBD;
   width: 50px;
   height: 50px;
   padding: 10px;
@@ -92,7 +92,7 @@ header {
 
 .rating li:hover,
 .num-display {
-  background: #ff6a95;
+  background: #557C55;
   color: #fff;
 }
 
@@ -101,7 +101,7 @@ header {
 }
 
 [type='radio']:checked ~ label {
-  background: #ff6a95;
+  background: #47A992;
   color: #fff;
 }
 
@@ -124,7 +124,7 @@ input:focus {
 }
 
 .feedback-stats {
-  color: #fff;
+  color: #94A684;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -161,11 +161,11 @@ input:focus {
 }
 
 .btn-primary {
-  background-color: #202142;
+  background-color: #184D47;
 }
 
 .btn-secondary {
-  background: #ff6a95;
+  background: #47A992;
 }
 
 .btn:hover {
@@ -206,7 +206,7 @@ input:focus {
 }
 
 .about-link a:hover {
-  color: #ff6a95;
+  color: #7EAA92;
 }
 
 .about h1 {
