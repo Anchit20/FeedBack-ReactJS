@@ -57,7 +57,7 @@ const handleSubmit = (e) => {
     return (
     <Card>
         <form onSubmit={handleSubmit}>
-            <h2>How would you rate your service ?</h2>
+            <h2>How would you rate our service ?</h2>
             <RatingSelect select={SetRating}/> 
             <div className='input-group'>
                 <input onChange={handleTextChange} type='text' placeholder="Review" value={text}/>
