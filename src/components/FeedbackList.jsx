@@ -3,34 +3,52 @@ import { useContext } from 'react'
 import { hasFormSubmit } from "@testing-library/user-event/dist/utils"
 import FeedBackitem from "./FeedBackitem"
 import FeedbackContext from '../context/FeedbackContext'
-
+import Spinner from './sharedd/Spinner'
 
 function FeedbackList() {
-    const{feedback} = useContext(FeedbackContext)
+    const{feedback, isLoading} = useContext(FeedbackContext)
     
 
-if(!feedback || feedback.length === 0){
+if(!isLoading && (!feedback || feedback.length === 0)){
     return <p>NO feeback given</p>
 }
-
-return (
+return isLoading ? (
+       <Spinner/> 
+    ) : (
     <div className='feedback-list'>
     <AnimatePresence>
     {feedback.map((item)=> (
-        <motion.div key={item.id}
-        initial = {{opacity : 0}}
-        animate = {{opacity : 1}}
-        exit={{opacity : 0}}
-        >
-        <FeedBackitem
-         key={item.id} 
-         item={item}
-         />
-         </motion.div>
-    ))}
-    </AnimatePresence>
-    </div>
-  )
+    <motion.div key={item.id}
+    initial = {{opacity : 0}}
+    animate = {{opacity : 1}}
+    exit={{opacity : 0}}
+    >
+    <FeedBackitem
+     key={item.id} 
+     item={item}
+     />
+     </motion.div>
+))}
+</AnimatePresence>
+</div>)
+// return (
+    // <div className='feedback-list'>
+    // <AnimatePresence>
+    // {feedback.map((item)=> (
+    //     <motion.div key={item.id}
+    //     initial = {{opacity : 0}}
+    //     animate = {{opacity : 1}}
+    //     exit={{opacity : 0}}
+    //     >
+    //     <FeedBackitem
+    //      key={item.id} 
+    //      item={item}
+    //      />
+    //      </motion.div>
+    // ))}
+    // </AnimatePresence>
+    // </div>
+//   )
 
 //     return (
 //     <div className='feedback-list'>
